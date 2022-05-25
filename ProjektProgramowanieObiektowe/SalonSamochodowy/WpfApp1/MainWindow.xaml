@@ -1,0 +1,45 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+       Title="Salon Samochodowy" Height="500" Width="900">
+    <Grid Margin="0,0,0,-6" Loaded="Grid_Loaded">
+
+        <TextBox x:Name="txtboxID" HorizontalAlignment="Left" Margin="185,64,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="29" IsReadOnly="True"/>
+        <Label x:Name="lblID" Content="ID" HorizontalAlignment="Left" Height="29" Margin="72,64,0,0" VerticalAlignment="Top" Width="74"/>
+        <TextBox x:Name="txtboxFirstName" HorizontalAlignment="Left" Margin="185,109,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="29" />
+        <Label x:Name="lblFirstName" Content="Imie" HorizontalAlignment="Left" Height="29" Margin="72,109,0,0" VerticalAlignment="Top" Width="74"/>
+        <TextBox x:Name="txtboxLastName" HorizontalAlignment="Left" Margin="185,156,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Height="29"/>
+        <Label x:Name="lblLastName" Content="Nazwisko" HorizontalAlignment="Left" Height="29" Margin="72,156,0,0" VerticalAlignment="Top" Width="74"/>
+        <TextBox x:Name="txtboxPesel" HorizontalAlignment="Left" Margin="185,204,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="29"/>
+        <Label x:Name="lblContactNumber" Content="Numer telefonu" HorizontalAlignment="Left" Height="40" Margin="72,246,0,0" VerticalAlignment="Top" Width="104"/>
+        <TextBox x:Name="txtboxContactNumber" HorizontalAlignment="Left" Margin="185,251,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="29"/>
+        <Label x:Name="lblPesel" Content="Pesel" HorizontalAlignment="Left" Height="30" Margin="72,204,0,0" VerticalAlignment="Top" Width="74"/>
+
+        <Button x:Name="btnAdd" Content="Add" HorizontalAlignment="Left" Height="36" Margin="72,407,0,0" VerticalAlignment="Top" Width="104" Click="btnAdd_Click"/>
+        <Button x:Name="btnUpdate" Content="Update" HorizontalAlignment="Left" Height="36" Margin="200,407,0,0" VerticalAlignment="Top" Width="105" Click="btnUpdate_Click"/>
+        <Button x:Name="btnDelete" Content="Delete" HorizontalAlignment="Left" Height="36" Margin="329,407,0,0" VerticalAlignment="Top" Width="91" Click="btnDelete_Click"/>
+        <Button x:Name="btnClear"  Content="Clear" HorizontalAlignment="Left" Height="36" Margin="449,407,0,0" VerticalAlignment="Top" Width="102" Click="btnClear_Click"/>
+
+        <DataGrid x:Name="dgvklienci" Margin="363,109,44,104" SelectionChanged="dgvklienci_SelectionChanged" />
+
+        <Label x:Name="lblSearch" Content="Wyszukaj" HorizontalAlignment="Left" Height="29" Margin="357,64,0,0" VerticalAlignment="Top" Width="74"/>
+        <TextBox x:Name="txtboxSearch" HorizontalAlignment="Left" Margin="449,64,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="29" TextChanged="txtboxSearch_TextChanged_1"/>
+        <TextBox x:Name="txtboxemail" HorizontalAlignment="Left" Margin="185,306,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="30"/>
+        <Label x:Name="lblemail" Content="E-mail" HorizontalAlignment="Left" Height="29" Margin="72,292,0,0" VerticalAlignment="Top" Width="74"/>
+        <Button Content ="Wykonawca" Margin="719,393,94,32" Click="Button_Click" />
+        <Button Name="CloseButton"  Click="CloseButton_Click" Margin="845,10,10,425">
+            <Button.Foreground>
+                <ImageBrush Stretch="None"/>
+            </Button.Foreground>
+            <Button.Background>
+                <ImageBrush ImageSource="/icons8-close-window-48.png"/>
+            </Button.Background>
+        </Button>
+
+
+    </Grid>
+</Window>
